@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[11368 : has been passed to ---> [[FirefoxDriver: firefox on MAC (f0c8118a-2c1c-4da9-85e9-50d88b1fec56)] -> xpath: //input[@id='quote-main-zip-code-input']]<br>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="6451" started-at="2022-10-25T22:18:21Z" finished-at="2022-10-25T22:18:27Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="6451" started-at="2022-10-25T22:18:21Z" finished-at="2022-10-25T22:18:27Z">
+      <class name="auto.AutoTest">
+        <test-method status="PASS" signature="setUpDriver()[pri:0, instance:auto.AutoTest@a9cd3b1]" name="setUpDriver" is-config="true" duration-ms="5282" started-at="2022-10-25T22:18:21Z" finished-at="2022-10-25T22:18:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method status="PASS" signature="test()[pri:0, instance:auto.AutoTest@a9cd3b1]" name="test" duration-ms="262" started-at="2022-10-25T22:18:26Z" finished-at="2022-10-25T22:18:27Z">
+          <reporter-output>
+            <line>
+              <![CDATA[11368 : has been passed to ---> [[FirefoxDriver: firefox on MAC (f0c8118a-2c1c-4da9-85e9-50d88b1fec56)] -> xpath: //input[@id='quote-main-zip-code-input']]<br>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="tearUp()[pri:0, instance:auto.AutoTest@a9cd3b1]" name="tearUp" is-config="true" duration-ms="875" started-at="2022-10-25T22:18:27Z" finished-at="2022-10-25T22:18:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearUp -->
+      </class> <!-- auto.AutoTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
