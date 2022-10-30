@@ -7,14 +7,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.HomePage;
-
 import static utils.IConstant.*;
-
 import java.time.Duration;
-
 import utils.Configuration;
 
 public class BaseClass {
