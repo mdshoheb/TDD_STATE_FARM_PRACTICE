@@ -1,4 +1,4 @@
-package pages;
+package pages.common;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import common.CommonWaits;
+import utils.data.AutoData;
 
 import static common.CommonActions.*;
 
@@ -27,8 +28,18 @@ public class HomePage {
 	@FindBy(id = "nyLegacyCloseLinkId")
 	WebElement continuElement;
 	
-	public void autoSteps() {
-		input(zipCodElement, "11368");
+	public void autoSteps(String zipCode) {
+		input(zipCodElement, zipCode);
+		click(startQuoteElement);
+		
+		waits.waitUntilVisible(continuElement);
+		if(isPresent(continuElement) && isDisplayed(continuElement)) {
+			click(continuElement);
+		}
+	}
+	
+	public void autoSteps(AutoData autoData) {
+		input(zipCodElement, autoData.getZipCode());
 		click(startQuoteElement);
 		
 		waits.waitUntilVisible(continuElement);

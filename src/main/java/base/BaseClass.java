@@ -8,7 +8,9 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import pages.HomePage;
+import pages.auto.PersonalInfo;
+import pages.common.HomePage;
+
 import static utils.IConstant.*;
 import java.time.Duration;
 import utils.Configuration;
@@ -17,6 +19,7 @@ public class BaseClass {
 	WebDriver driver;
 	Configuration config = new Configuration();
 	protected HomePage homePage;
+	protected PersonalInfo personalInfo;
 
 	@BeforeMethod
 	public void setUpDriver() {
@@ -27,7 +30,7 @@ public class BaseClass {
 		long implicitWait = Long.parseLong(config.getProperty(IMPLICIT_WAIT));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(pageLoadTime));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
-		initClass();
+		initClasses();
 
 	}
 
@@ -57,8 +60,9 @@ public class BaseClass {
 		}
 	}
 
-	public void initClass() {
+	public void initClasses() {
 		homePage = new HomePage(driver);
+		personalInfo = new PersonalInfo(driver);
 	}
 
 	public WebDriver getDriver() {
@@ -67,6 +71,6 @@ public class BaseClass {
 
 	@AfterMethod
 	public void tearUp() {
-		getDriver().quit();
+		//getDriver().quit();
 	}
 }
